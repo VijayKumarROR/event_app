@@ -1,0 +1,29 @@
+<div class="container">
+	<%= form_for(@user, url: signup_path) do |f| %>
+	<%= @user.errors.full_messages.first if @user.errors.any? %>
+
+	
+  <div class="row">
+    <div class="col-sm-12">
+    	<%= f.label :name %>
+    	<%= f.text_field :name, :class => "form-group" %>
+    </div>
+    
+    <div class="col-sm-12">
+    	<%= f.label :email %>
+    	<%= f.text_field :email, :class => "form-grop" %>
+    </div>
+
+    <div class="col-sm-12">
+    	<p>Register as admin or user:</p>
+    	<input type="radio" name="user[is_admin]" value="true">As Admin
+    	<input type="radio" name="user[is_admin]" value="false">As User
+    </div>
+
+    <div class="action">
+    	<%= f.submit "Register", :class => "btn-btn" %>
+    </div>
+
+  </div>
+	<% end %>	
+</div>

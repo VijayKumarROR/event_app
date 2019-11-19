@@ -1,0 +1,19 @@
+<p>Login</p>
+
+
+<div class="container">
+	<%= form_for(:check_login, url: check_login_path) do |f| %>
+	
+  <div class="row">
+    <div class="col-sm-12">
+    	<%= f.label :email %>
+    	<%= f.text_field :email, :class => "form-grop" %>
+    </div>
+
+    <div class="action">
+    	<%= f.submit "Login", :class => "btn-btn" %>
+    </div>
+
+  </div>
+	<% end %>	
+</div>

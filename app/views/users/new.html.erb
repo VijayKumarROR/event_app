@@ -1,0 +1,44 @@
+<style>
+	.login-form{
+		    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+	}
+	.login-form .main-form{
+    width: auto;
+    height: auto;
+    background: #9ff3cc;
+    padding: 35px;
+    margin: ;
+	}
+	.btn-a{
+	padding: 6px 12px;
+    background: #fff;
+    border-radius: 4px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: none;
+    border: 1px solid #fff;
+	}
+	.actions {
+    text-align: center;
+}
+</style>
+
+
+<div class="login-form">
+<h1>New User</h1>
+
+	<div class="main-form">
+		<%= render 'form' %>
+	<div class="actions">
+		<%= link_to 'Login', homes_login_path , :class => "btn-a" %>	
+	</div>
+
+	</div>
+
+</div>

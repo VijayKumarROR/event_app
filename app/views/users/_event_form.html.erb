@@ -1,0 +1,18 @@
+<h1>Event Page</h1>
+<%= form_for(@event || Event.new, url: @event.present? ? event_path : events_create_event_path, :html => {"data-parsley-validate" => true}) do |f| %>
+<%= f.hidden_field :user_id, value: @user.try(:id) %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, "data-parsley-required" => "true", "data-parsley-required-message" => "Please enter event name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location, "data-parsley-required" => "true", "data-parsley-required-message" => "Please enter eevent location" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Save", :class => "btn-a" %>
+  </div>
+<% end %>

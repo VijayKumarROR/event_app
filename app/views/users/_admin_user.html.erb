@@ -1,0 +1,24 @@
+<style type="text/css">
+	.parsley-required{
+		color: red;
+	}
+  .box-container{
+    padding: 56px;
+  }
+</style>
+
+<div class="box-container">
+  <% if @events.present? %>
+  <p>List of Events</p>
+    <% @events.each do |e| %>
+    <div class="row">
+      <p>Event name: <%= e.name %></p>
+      <p>Event Location: <%= e.location %></p>&nbsp;
+      <%= link_to 'Edit', edit_event_path(e.id) %>
+    </div>
+    <% end %>
+  <% end %>
+
+<%= render 'event_form' %>
+
+</div>
